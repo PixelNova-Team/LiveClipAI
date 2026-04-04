@@ -74,26 +74,27 @@ export function getFFmpegPath(): string {
   }
 
   // macOS/Linux: Check ffmpeg-static (bundled in node_modules and unpacked by asar)
+  // Verify it's actually executable — macOS Gatekeeper may block unsigned binaries
   try {
     const ffmpegStatic = require('ffmpeg-static')
     if (ffmpegStatic && existsSync(ffmpegStatic)) {
-      // Ensure execute permission (npm install sometimes strips it)
+      // Ensure execute permission
       try {
-        const { chmodSync, accessSync, constants } = require('fs')
-        accessSync(ffmpegStatic, constants.X_OK)
-      } catch {
-        try {
-          require('fs').chmodSync(ffmpegStatic, 0o755)
-          logger.info(`Fixed execute permission on ffmpeg-static: ${ffmpegStatic}`)
-        } catch (e2) {
-          logger.warn(`Cannot fix ffmpeg-static permission: ${e2}`)
-        }
+        require('fs').chmodSync(ffmpegStatic, 0o755)
+      } catch { /* ignore */ }
+
+      // Verify binary actually runs (macOS blocks unsigned binaries with error -88)
+      const { spawnSync } = require('child_process')
+      const test = spawnSync(ffmpegStatic, ['-version'], { timeout: 3000, encoding: 'utf8' })
+      if (test.error) {
+        logger.warn(`ffmpeg-static blocked by OS (${test.error.message}), using system ffmpeg`)
+      } else {
+        logger.info(`Using ffmpeg-static: ${ffmpegStatic}`)
+        return ffmpegStatic
       }
-      logger.info(`Using ffmpeg-static: ${ffmpegStatic}`)
-      return ffmpegStatic
     }
   } catch (e) {
-    logger.warn(`ffmpeg-static not found: ${e}`)
+    logger.warn(`ffmpeg-static not available: ${e}`)
   }
 
   // Fall back to system ffmpeg
