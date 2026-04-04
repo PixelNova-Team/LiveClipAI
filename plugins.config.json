@@ -1,41 +1,14 @@
 {
-  "plugins": [
-    { "id": "platform-douyin", "enabled": true },
-    { "id": "platform-bilibili", "enabled": true },
-    { "id": "platform-douyu", "enabled": true },
-    { "id": "platform-huya", "enabled": true },
-    { "id": "platform-kuaishou", "enabled": true },
-    { "id": "platform-youtube", "enabled": false },
-    { "id": "danmaku-douyin", "enabled": true },
-    { "id": "danmaku-bilibili", "enabled": true },
-    { "id": "danmaku-douyu", "enabled": true },
-    { "id": "danmaku-huya", "enabled": true },
-    { "id": "danmaku-kuaishou", "enabled": true },
-    { "id": "danmaku-youtube", "enabled": false },
-    { "id": "publisher-douyin", "enabled": true },
-    { "id": "publisher-bilibili", "enabled": true },
-    { "id": "publisher-kuaishou", "enabled": true },
-    { "id": "publisher-youtube", "enabled": false }
-  ],
+  "version": "1.0.0",
   "platforms": [
     {
-      "name": "douyu",
-      "cdnDomains": ["douyu.com"],
-      "cookieDomain": ".douyu.com",
-      "authCookieNames": ["acf_uid", "acf_auth"],
-      "brandColor": "#FF5500",
-      "roomIdRegex": "douyu\\.com/(?:rid/)?(\\d+)"
-    },
-    {
-      "name": "bilibili",
-      "cdnDomains": ["bilibili.com", "live.bilibili.com", "bilivideo.com"],
-      "cookieDomain": ".bilibili.com",
-      "authCookieNames": ["SESSDATA", "bili_jct", "DedeUserID"],
-      "brandColor": "#FB7299",
-      "roomIdRegex": "live\\.bilibili\\.com/(\\d+)"
-    },
-    {
+      "id": "platform-douyin",
       "name": "douyin",
+      "label": "抖音直播",
+      "label_en": "Douyin Live",
+      "version": "1.0.0",
+      "description": "Live streaming platform plugin for Douyin",
+      "enabled": true,
       "cdnDomains": ["douyin.com", "live.douyin.com"],
       "cookieDomain": ".douyin.com",
       "authCookieNames": ["ttwid", "sessionid"],
@@ -43,7 +16,41 @@
       "roomIdRegex": "live\\.douyin\\.com/(\\d+)"
     },
     {
+      "id": "platform-bilibili",
+      "name": "bilibili",
+      "label": "哔哩哔哩直播",
+      "label_en": "Bilibili Live",
+      "version": "1.0.0",
+      "description": "Live streaming platform plugin for Bilibili",
+      "enabled": true,
+      "cdnDomains": ["bilibili.com", "live.bilibili.com", "bilivideo.com"],
+      "cookieDomain": ".bilibili.com",
+      "authCookieNames": ["SESSDATA", "bili_jct", "DedeUserID"],
+      "brandColor": "#FB7299",
+      "roomIdRegex": "live\\.bilibili\\.com/(\\d+)"
+    },
+    {
+      "id": "platform-douyu",
+      "name": "douyu",
+      "label": "斗鱼直播",
+      "label_en": "Douyu Live",
+      "version": "1.0.0",
+      "description": "Live streaming platform plugin for Douyu",
+      "enabled": true,
+      "cdnDomains": ["douyu.com"],
+      "cookieDomain": ".douyu.com",
+      "authCookieNames": ["acf_uid", "acf_auth"],
+      "brandColor": "#FF5500",
+      "roomIdRegex": "douyu\\.com/(?:rid/)?(\\d+)"
+    },
+    {
+      "id": "platform-huya",
       "name": "huya",
+      "label": "虎牙直播",
+      "label_en": "Huya Live",
+      "version": "1.0.0",
+      "description": "Live streaming platform plugin for Huya",
+      "enabled": true,
       "cdnDomains": ["huya.com"],
       "cookieDomain": ".huya.com",
       "authCookieNames": ["udb_uid", "udb_biztoken"],
@@ -51,12 +58,130 @@
       "roomIdRegex": "huya\\.com/([a-zA-Z0-9_]+)"
     },
     {
+      "id": "platform-kuaishou",
       "name": "kuaishou",
+      "label": "快手直播",
+      "label_en": "Kuaishou Live",
+      "version": "1.0.0",
+      "description": "Live streaming platform plugin for Kuaishou",
+      "enabled": true,
       "cdnDomains": ["kuaishou.com", "live.kuaishou.com"],
       "cookieDomain": ".kuaishou.com",
       "authCookieNames": ["kuaishou.server.web_st"],
       "brandColor": "#FF4500",
       "roomIdRegex": "live\\.kuaishou\\.com/u/([a-zA-Z0-9_]+)"
+    },
+    {
+      "id": "platform-youtube",
+      "name": "youtube",
+      "label": "YouTube Live",
+      "label_en": "YouTube Live",
+      "version": "1.0.0",
+      "description": "Live streaming platform plugin for YouTube",
+      "enabled": false,
+      "cdnDomains": ["youtube.com", "youtu.be"],
+      "cookieDomain": ".youtube.com",
+      "authCookieNames": [],
+      "brandColor": "#FF0000",
+      "roomIdRegex": "youtube\\.com/(?:watch\\?v=|live/)([a-zA-Z0-9_-]+)"
+    }
+  ],
+  "danmaku": [
+    {
+      "id": "danmaku-douyin",
+      "name": "douyin",
+      "platform": "douyin",
+      "label": "抖音弹幕",
+      "version": "1.0.0",
+      "description": "Danmaku collector for Douyin",
+      "enabled": true
+    },
+    {
+      "id": "danmaku-bilibili",
+      "name": "bilibili",
+      "platform": "bilibili",
+      "label": "B站弹幕",
+      "version": "1.0.0",
+      "description": "Danmaku collector for Bilibili",
+      "enabled": true
+    },
+    {
+      "id": "danmaku-douyu",
+      "name": "douyu",
+      "platform": "douyu",
+      "label": "斗鱼弹幕",
+      "version": "1.0.0",
+      "description": "Danmaku collector for Douyu",
+      "enabled": true
+    },
+    {
+      "id": "danmaku-huya",
+      "name": "huya",
+      "platform": "huya",
+      "label": "虎牙弹幕",
+      "version": "1.0.0",
+      "description": "Danmaku collector for Huya",
+      "enabled": true
+    },
+    {
+      "id": "danmaku-kuaishou",
+      "name": "kuaishou",
+      "platform": "kuaishou",
+      "label": "快手弹幕",
+      "version": "1.0.0",
+      "description": "Danmaku collector for Kuaishou",
+      "enabled": true
+    },
+    {
+      "id": "danmaku-youtube",
+      "name": "youtube",
+      "platform": "youtube",
+      "label": "YouTube Chat",
+      "version": "1.0.0",
+      "description": "Danmaku collector for YouTube",
+      "enabled": false
+    }
+  ],
+  "publishers": [
+    {
+      "id": "publisher-douyin",
+      "name": "douyin",
+      "platform": "douyin",
+      "label": "抖音发布",
+      "version": "1.0.0",
+      "description": "Publisher for Douyin",
+      "enabled": true,
+      "requires_login": true
+    },
+    {
+      "id": "publisher-bilibili",
+      "name": "bilibili",
+      "platform": "bilibili",
+      "label": "B站发布",
+      "version": "1.0.0",
+      "description": "Publisher for Bilibili",
+      "enabled": true,
+      "requires_login": true
+    },
+    {
+      "id": "publisher-kuaishou",
+      "name": "kuaishou",
+      "platform": "kuaishou",
+      "label": "快手发布",
+      "version": "1.0.0",
+      "description": "Publisher for Kuaishou",
+      "enabled": true,
+      "requires_login": true
+    },
+    {
+      "id": "publisher-youtube",
+      "name": "youtube",
+      "platform": "youtube",
+      "label": "YouTube Upload",
+      "version": "1.0.0",
+      "description": "Publisher for YouTube",
+      "enabled": false,
+      "requires_login": true
     }
   ]
 }
