@@ -77,6 +77,18 @@ export function getFFmpegPath(): string {
   try {
     const ffmpegStatic = require('ffmpeg-static')
     if (ffmpegStatic && existsSync(ffmpegStatic)) {
+      // Ensure execute permission (npm install sometimes strips it)
+      try {
+        const { chmodSync, accessSync, constants } = require('fs')
+        accessSync(ffmpegStatic, constants.X_OK)
+      } catch {
+        try {
+          require('fs').chmodSync(ffmpegStatic, 0o755)
+          logger.info(`Fixed execute permission on ffmpeg-static: ${ffmpegStatic}`)
+        } catch (e2) {
+          logger.warn(`Cannot fix ffmpeg-static permission: ${e2}`)
+        }
+      }
       logger.info(`Using ffmpeg-static: ${ffmpegStatic}`)
       return ffmpegStatic
     }
