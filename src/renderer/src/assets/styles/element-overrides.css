@@ -1,0 +1,399 @@
+/* ===================================================================
+   Element Plus Theme Overrides
+   - Dark: glassmorphism style
+   - Light: clean bright style
+   =================================================================== */
+
+/* ===== DARK MODE ===== */
+
+/* Dialog */
+html.dark .el-dialog {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+html.dark .el-dialog__header {
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+html.dark .el-dialog__title {
+  color: var(--text-primary) !important;
+}
+html.dark .el-dialog__body {
+  color: var(--text-primary) !important;
+}
+
+/* Overlay backdrop */
+html.dark .el-overlay {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Input */
+html.dark .el-input__wrapper {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: none !important;
+}
+html.dark .el-input__wrapper:focus-within {
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15) !important;
+}
+html.dark .el-input__inner {
+  color: var(--text-primary) !important;
+}
+html.dark .el-input__inner::placeholder {
+  color: var(--text-tertiary) !important;
+}
+html.dark .el-input__prefix,
+html.dark .el-input__suffix {
+  color: var(--text-tertiary) !important;
+}
+
+/* Textarea */
+html.dark .el-textarea__inner {
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-primary) !important;
+  box-shadow: none !important;
+}
+html.dark .el-textarea__inner:focus {
+  border-color: var(--accent-blue) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Select */
+html.dark .el-select-dropdown {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+html.dark .el-select-dropdown__item {
+  color: var(--text-secondary) !important;
+}
+html.dark .el-select-dropdown__item.hover,
+html.dark .el-select-dropdown__item:hover {
+  background: var(--glass-hover) !important;
+  color: var(--text-primary) !important;
+}
+html.dark .el-select-dropdown__item.is-selected {
+  color: var(--accent-blue) !important;
+}
+
+/* Table */
+html.dark .el-table {
+  background: transparent !important;
+  --el-table-bg-color: transparent !important;
+  --el-table-tr-bg-color: transparent !important;
+  --el-table-header-bg-color: rgba(255, 255, 255, 0.03) !important;
+  --el-table-row-hover-bg-color: rgba(255, 255, 255, 0.05) !important;
+  --el-table-border-color: var(--glass-border) !important;
+  --el-table-text-color: var(--text-primary) !important;
+  --el-table-header-text-color: var(--text-secondary) !important;
+  color: var(--text-primary) !important;
+}
+html.dark .el-table th.el-table__cell {
+  font-weight: 600;
+  font-size: 13px;
+}
+html.dark .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Card */
+html.dark .el-card {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-primary) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+html.dark .el-card__header {
+  border-bottom: 1px solid var(--glass-border) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Tabs */
+html.dark .el-tabs__item {
+  color: var(--text-secondary) !important;
+}
+html.dark .el-tabs__item.is-active {
+  color: var(--text-primary) !important;
+}
+html.dark .el-tabs__active-bar {
+  background: var(--accent-gradient) !important;
+}
+html.dark .el-tabs__nav-wrap::after {
+  background-color: var(--glass-border) !important;
+}
+
+/* Pagination */
+html.dark .el-pagination {
+  --el-pagination-bg-color: transparent !important;
+  --el-pagination-text-color: var(--text-secondary) !important;
+  --el-pagination-button-bg-color: var(--glass-bg) !important;
+}
+html.dark .el-pager li {
+  background: var(--glass-bg) !important;
+  color: var(--text-secondary) !important;
+}
+html.dark .el-pager li.is-active {
+  background: var(--accent-gradient) !important;
+  color: white !important;
+}
+html.dark .el-pagination button {
+  background: var(--glass-bg) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Message Box */
+html.dark .el-message-box {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-xl) !important;
+}
+html.dark .el-message-box__title {
+  color: var(--text-primary) !important;
+}
+html.dark .el-message-box__content {
+  color: var(--text-secondary) !important;
+}
+.el-message-box__btns .el-button {
+  border-radius: var(--radius-md) !important;
+  min-width: 72px;
+}
+
+/* Message */
+html.dark .el-message {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+/* Loading */
+html.dark .el-loading-mask {
+  background: rgba(15, 15, 26, 0.8) !important;
+}
+
+/* Empty */
+html.dark .el-empty__description p {
+  color: var(--text-tertiary) !important;
+}
+
+/* Form */
+html.dark .el-form-item__label {
+  color: var(--text-secondary) !important;
+}
+
+/* Switch */
+html.dark .el-switch.is-checked .el-switch__core {
+  background: var(--accent-blue) !important;
+  border-color: var(--accent-blue) !important;
+}
+
+/* Tooltip/Popover */
+html.dark .el-popper {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-primary) !important;
+}
+html.dark .el-popper__arrow::before {
+  background: var(--bg-secondary) !important;
+  border-color: var(--glass-border) !important;
+}
+
+/* Menu */
+html.dark .el-menu {
+  background: transparent !important;
+  border: none !important;
+}
+html.dark .el-menu-item,
+html.dark .el-sub-menu__title {
+  color: var(--text-secondary) !important;
+}
+html.dark .el-menu-item.is-active {
+  color: var(--text-primary) !important;
+  background: var(--glass-hover) !important;
+}
+
+/* Breadcrumb */
+html.dark .el-breadcrumb__inner {
+  color: var(--text-tertiary) !important;
+}
+html.dark .el-breadcrumb__inner.is-link:hover {
+  color: var(--text-primary) !important;
+}
+html.dark .el-breadcrumb__separator {
+  color: var(--text-tertiary) !important;
+}
+
+/* Dropdown */
+html.dark .el-dropdown-menu {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+html.dark .el-dropdown-menu__item {
+  color: var(--text-secondary) !important;
+}
+html.dark .el-dropdown-menu__item:hover {
+  background: var(--glass-hover) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Notification */
+html.dark .el-notification {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+html.dark .el-notification__title {
+  color: var(--text-primary) !important;
+}
+html.dark .el-notification__content {
+  color: var(--text-secondary) !important;
+}
+
+/* Divider */
+html.dark .el-divider {
+  border-color: var(--glass-border) !important;
+}
+html.dark .el-divider__text {
+  background: var(--bg-primary) !important;
+  color: var(--text-tertiary) !important;
+}
+
+/* Checkbox / Radio */
+html.dark .el-checkbox__label,
+html.dark .el-radio__label {
+  color: var(--text-primary) !important;
+}
+
+/* Descriptions */
+html.dark .el-descriptions__label {
+  color: var(--text-secondary) !important;
+}
+html.dark .el-descriptions__content {
+  color: var(--text-primary) !important;
+}
+
+/* ===== SHARED (both themes) ===== */
+
+/* Button base transitions */
+.el-button {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Rounded corners for all buttons */
+.el-button {
+  border-radius: var(--radius-md) !important;
+}
+
+/* Primary solid button — gradient bg, white text */
+.el-button--primary:not(.is-text):not(.is-link):not(.is-plain) {
+  background: var(--accent-gradient) !important;
+  border: none !important;
+  color: #fff !important;
+}
+.el-button--primary:not(.is-text):not(.is-link):not(.is-plain):hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3) !important;
+}
+
+/* Primary text button — readable text, no bg */
+.el-button--primary.is-text {
+  background: transparent !important;
+  border: none !important;
+  color: var(--accent-blue) !important;
+}
+.el-button--primary.is-text:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: var(--accent-blue) !important;
+}
+
+/* Warning text button */
+.el-button--warning.is-text {
+  background: transparent !important;
+  border: none !important;
+  color: var(--status-warning) !important;
+}
+.el-button--warning.is-text:hover {
+  background: rgba(245, 158, 11, 0.1) !important;
+}
+
+/* Danger text button */
+.el-button--danger.is-text {
+  background: transparent !important;
+  border: none !important;
+  color: var(--status-danger) !important;
+}
+.el-button--danger.is-text:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Default button */
+html.dark .el-button--default {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-md) !important;
+}
+html.dark .el-button--default:hover {
+  background: var(--glass-hover) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Info button */
+html.dark .el-button--info {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Input/Select/Dialog border-radius (shared) */
+.el-input__wrapper {
+  border-radius: var(--radius-md) !important;
+}
+.el-select-dropdown {
+  border-radius: var(--radius-md) !important;
+}
+.el-dialog {
+  border-radius: var(--radius-xl) !important;
+}
+
+/* Tag */
+.el-tag {
+  border-radius: var(--radius-sm) !important;
+}
+
+/* Alert */
+.el-alert {
+  border-radius: var(--radius-md) !important;
+}
+
+/* ===== LIGHT MODE ===== */
+
+/* Light dialog */
+html.light .el-dialog {
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Light table */
+html.light .el-table {
+  --el-table-border-color: var(--glass-border) !important;
+  --el-table-header-bg-color: rgba(0, 0, 0, 0.02) !important;
+  --el-table-row-hover-bg-color: rgba(0, 0, 0, 0.02) !important;
+}
+html.light .el-table th.el-table__cell {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Light pagination active */
+html.light .el-pager li.is-active {
+  background: var(--accent-gradient) !important;
+  color: white !important;
+}
+
+/* Light tabs active bar */
+html.light .el-tabs__active-bar {
+  background: var(--accent-gradient) !important;
+}

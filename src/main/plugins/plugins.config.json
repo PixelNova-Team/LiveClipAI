@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    { "id": "platform-douyin", "enabled": true },
+    { "id": "platform-bilibili", "enabled": true },
+    { "id": "platform-douyu", "enabled": true },
+    { "id": "platform-huya", "enabled": true },
+    { "id": "platform-kuaishou", "enabled": true },
+    { "id": "platform-youtube", "enabled": false },
+    { "id": "danmaku-douyin", "enabled": true },
+    { "id": "danmaku-bilibili", "enabled": true },
+    { "id": "danmaku-douyu", "enabled": true },
+    { "id": "danmaku-huya", "enabled": true },
+    { "id": "danmaku-kuaishou", "enabled": true },
+    { "id": "danmaku-youtube", "enabled": false },
+    { "id": "publisher-douyin", "enabled": true },
+    { "id": "publisher-bilibili", "enabled": true },
+    { "id": "publisher-kuaishou", "enabled": true },
+    { "id": "publisher-youtube", "enabled": false }
+  ]
+}

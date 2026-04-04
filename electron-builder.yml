@@ -1,0 +1,37 @@
+appId: com.liveclipai.app
+productName: LiveClipAI
+directories:
+  output: release
+  buildResources: build
+mac:
+  category: public.app-category.entertainment
+  target: dmg
+  icon: build/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  # identity: "Your Apple Developer Identity (Team ID)"
+  notarize: false
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: build/icon.ico
+  extraResources:
+    - from: static/ffmpeg/win
+      to: ffmpeg
+  files:
+    - out/**/*
+    - node_modules/**/*
+    - '!node_modules/ffmpeg-static/**'
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+files:
+  - out/**/*
+  - node_modules/**/*
+asarUnpack:
+  - node_modules/ffmpeg-static/**
+  - node_modules/better-sqlite3/**
+asar: true

@@ -1,0 +1,87 @@
+# OS metadata
+.DS_Store
+**/.DS_Store
+
+# Private Claude settings
+.claude/
+
+# Internal planning & private docs
+docs/plans/
+prd.md
+.impeccable.md
+
+# Electron secrets
+.env
+
+# FFmpeg binary (Windows, download separately)
+static/ffmpeg/win/ffmpeg.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ruff_cache/
+.pytest_cache/
+
+# Build outputs
+dist/
+build/
+out/
+release/
+
+# Config & secrets
+.env
+config.yaml
+config.yml
+cookies/
+
+# Data & media
+*.db
+data/
+output/
+logs/
+*.mp4
+*.mp3
+*.wav
+*.flv
+*.srt
+*.ts.seg
+
+# Node
+node_modules/
+liveclipai-ui/dist/
+
+# Abandoned legacy directories
+liveclipai/
+frontend/
+autosliceai/
+
+# Huya/debug scripts (development artifacts)
+test-*.js
+test_*.js
+test-*.mjs
+test_*.mjs
+quick_*.js
+ws_sniffer.js
+capture-*.js
+auto-capture-*.js
+setup-proxy-*.sh
+EXTRACT_HUYA_TOKEN.js
+
+# Session notes & temporary docs
+HUYA_*.md
+FIX_*.md
+SESSION_*.md
+NEXT_STEPS_*.md
+START_HERE_*.md
+CLEANUP_SUMMARY.md
+QUICK_CACHE_CLEAN.md
+WHICH_CLEANUP.md
+QUICK_HUYA_DEBUG.md
+
+# Electron build artifacts
+out/
+release/
+*.tsbuildinfo

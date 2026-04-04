@@ -1,0 +1,62 @@
+{
+  "plugins": [
+    { "id": "platform-douyin", "enabled": true },
+    { "id": "platform-bilibili", "enabled": true },
+    { "id": "platform-douyu", "enabled": true },
+    { "id": "platform-huya", "enabled": true },
+    { "id": "platform-kuaishou", "enabled": true },
+    { "id": "platform-youtube", "enabled": false },
+    { "id": "danmaku-douyin", "enabled": true },
+    { "id": "danmaku-bilibili", "enabled": true },
+    { "id": "danmaku-douyu", "enabled": true },
+    { "id": "danmaku-huya", "enabled": true },
+    { "id": "danmaku-kuaishou", "enabled": true },
+    { "id": "danmaku-youtube", "enabled": false },
+    { "id": "publisher-douyin", "enabled": true },
+    { "id": "publisher-bilibili", "enabled": true },
+    { "id": "publisher-kuaishou", "enabled": true },
+    { "id": "publisher-youtube", "enabled": false }
+  ],
+  "platforms": [
+    {
+      "name": "douyu",
+      "cdnDomains": ["douyu.com"],
+      "cookieDomain": ".douyu.com",
+      "authCookieNames": ["acf_uid", "acf_auth"],
+      "brandColor": "#FF5500",
+      "roomIdRegex": "douyu\\.com/(?:rid/)?(\\d+)"
+    },
+    {
+      "name": "bilibili",
+      "cdnDomains": ["bilibili.com", "live.bilibili.com", "bilivideo.com"],
+      "cookieDomain": ".bilibili.com",
+      "authCookieNames": ["SESSDATA", "bili_jct", "DedeUserID"],
+      "brandColor": "#FB7299",
+      "roomIdRegex": "live\\.bilibili\\.com/(\\d+)"
+    },
+    {
+      "name": "douyin",
+      "cdnDomains": ["douyin.com", "live.douyin.com"],
+      "cookieDomain": ".douyin.com",
+      "authCookieNames": ["ttwid", "sessionid"],
+      "brandColor": "#000000",
+      "roomIdRegex": "live\\.douyin\\.com/(\\d+)"
+    },
+    {
+      "name": "huya",
+      "cdnDomains": ["huya.com"],
+      "cookieDomain": ".huya.com",
+      "authCookieNames": ["udb_uid", "udb_biztoken"],
+      "brandColor": "#FFB500",
+      "roomIdRegex": "huya\\.com/([a-zA-Z0-9_]+)"
+    },
+    {
+      "name": "kuaishou",
+      "cdnDomains": ["kuaishou.com", "live.kuaishou.com"],
+      "cookieDomain": ".kuaishou.com",
+      "authCookieNames": ["kuaishou.server.web_st"],
+      "brandColor": "#FF4500",
+      "roomIdRegex": "live\\.kuaishou\\.com/u/([a-zA-Z0-9_]+)"
+    }
+  ]
+}
