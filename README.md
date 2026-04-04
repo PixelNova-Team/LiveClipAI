@@ -13,9 +13,11 @@
 
 ## 截图
 
-| 工作台 | 直播监控 | 切片管理 |
-|:------:|:--------:|:--------:|
-| ![工作台](docs/screenshots/dashboard.png) | ![直播监控](docs/screenshots/live-monitor.png) | ![切片管理](docs/screenshots/clip-manager.png) |
+![工作台](docs/screenshots/dashboard.png)
+
+![直播监控](docs/screenshots/live-monitor.png)
+
+![切片管理](docs/screenshots/clip-manager.png)
 
 ---
 

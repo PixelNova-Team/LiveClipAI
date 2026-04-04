@@ -13,9 +13,11 @@
 
 ## Screenshots
 
-| Dashboard | Live Monitor | Clip Manager |
-|:---------:|:------------:|:------------:|
-| ![Dashboard](docs/screenshots/dashboard.png) | ![Live Monitor](docs/screenshots/live-monitor.png) | ![Clip Manager](docs/screenshots/clip-manager.png) |
+![Dashboard](docs/screenshots/dashboard.png)
+
+![Live Monitor](docs/screenshots/live-monitor.png)
+
+![Clip Manager](docs/screenshots/clip-manager.png)
 
 ---
 
